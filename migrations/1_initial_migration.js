@@ -18,6 +18,6 @@ module.exports = function(deployer) {
   }).then(function(){
     return deployer.deploy(TokenContractImpl,options.initialSupply,options.decimalUnit,OwnerValidatorImpl.address,OffChainManagerImpl.address)
   }).then(function(){
-    return deployer.deploy(MainContract,options.symbol,OwnerValidatorImpl.address, TokenContractImpl.addrses,options.symbol)
+    return deployer.deploy(MainContract,options.symbol,OwnerValidatorImpl.address, TokenContractImpl.address,options.symbol)
   })
 };
